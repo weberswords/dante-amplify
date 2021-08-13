@@ -9,6 +9,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import PaletteIcon from '@material-ui/icons/Palette';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,13 +25,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Nav() {
     const classes = useStyles();
-    const [auth, setAuth] = React.useState(true);
+    const [auth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-  
-    const handleChange = (event) => {
-      setAuth(event.target.checked);
-    };
   
     const handleMenu = (event) => {
       setAnchorEl(event.currentTarget);
@@ -44,12 +41,15 @@ function Nav() {
     <div className={classes.root}>
       <AppBar position="sticky">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <HomeIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
               Dante
           </Typography>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <HomeIcon />
+          </IconButton>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <PaletteIcon />
+          </IconButton>
           {auth && (
             <div>
               <IconButton

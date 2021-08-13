@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MUIEditor, { MUIEditorState } from "react-mui-draft-wysiwyg";
-import { CenterFocusStrong } from '@material-ui/icons';
 
 function Draft() { 
     const useStyles = makeStyles((theme) => ({
@@ -22,6 +21,7 @@ function Draft() {
     return (
         
         <div className={classes.parentDiv}>
+
             <h2>Create New Portfolio Piece</h2>
             <MUIEditor editorState={editorState} onChange={onChange} />
         </div>
