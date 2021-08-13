@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import MUIEditor, { MUIEditorState } from "react-mui-draft-wysiwyg";
 
 function Draft() { 
@@ -18,12 +19,17 @@ function Draft() {
       setEditorState(newState)
     }
     const classes = useStyles();
+
     return (
         
         <div className={classes.parentDiv}>
 
             <h2>Create New Portfolio Piece</h2>
             <MUIEditor editorState={editorState} onChange={onChange} />
+            <Button
+             variant="contained"
+             color="primary"
+            >Add Artifact</Button>
         </div>
     )
   }
