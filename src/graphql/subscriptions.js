@@ -10,6 +10,7 @@ export const onCreatePortfolio = /* GraphQL */ `
         items {
           id
           title
+          content
           portfolioID
           createdAt
           updatedAt
@@ -30,6 +31,7 @@ export const onUpdatePortfolio = /* GraphQL */ `
         items {
           id
           title
+          content
           portfolioID
           createdAt
           updatedAt
@@ -50,6 +52,7 @@ export const onDeletePortfolio = /* GraphQL */ `
         items {
           id
           title
+          content
           portfolioID
           createdAt
           updatedAt
@@ -66,6 +69,7 @@ export const onCreateArtifact = /* GraphQL */ `
     onCreateArtifact {
       id
       title
+      content
       portfolioID
       portfolio {
         id
@@ -96,6 +100,7 @@ export const onUpdateArtifact = /* GraphQL */ `
     onUpdateArtifact {
       id
       title
+      content
       portfolioID
       portfolio {
         id
@@ -126,6 +131,7 @@ export const onDeleteArtifact = /* GraphQL */ `
     onDeleteArtifact {
       id
       title
+      content
       portfolioID
       portfolio {
         id
@@ -159,6 +165,7 @@ export const onCreateComment = /* GraphQL */ `
       artifact {
         id
         title
+        content
         portfolioID
         portfolio {
           id
@@ -186,6 +193,7 @@ export const onUpdateComment = /* GraphQL */ `
       artifact {
         id
         title
+        content
         portfolioID
         portfolio {
           id
@@ -213,6 +221,7 @@ export const onDeleteComment = /* GraphQL */ `
       artifact {
         id
         title
+        content
         portfolioID
         portfolio {
           id

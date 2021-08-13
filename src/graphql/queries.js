@@ -10,6 +10,7 @@ export const getPortfolio = /* GraphQL */ `
         items {
           id
           title
+          content
           portfolioID
           createdAt
           updatedAt
@@ -46,6 +47,7 @@ export const getArtifact = /* GraphQL */ `
     getArtifact(id: $id) {
       id
       title
+      content
       portfolioID
       portfolio {
         id
@@ -81,6 +83,7 @@ export const listArtifacts = /* GraphQL */ `
       items {
         id
         title
+        content
         portfolioID
         portfolio {
           id
@@ -106,6 +109,7 @@ export const getComment = /* GraphQL */ `
       artifact {
         id
         title
+        content
         portfolioID
         portfolio {
           id
@@ -138,6 +142,7 @@ export const listComments = /* GraphQL */ `
         artifact {
           id
           title
+          content
           portfolioID
           createdAt
           updatedAt

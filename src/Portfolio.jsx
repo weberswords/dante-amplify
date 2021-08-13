@@ -32,7 +32,7 @@ function Portfolio() {
         console.log('artifact list', artifactList);
         setArtifacts(artifactList);
       } catch (error) {
-        console.log('error fetching artifacts'. error);
+        console.log('error fetching artifacts', error);
       }
     };
 
@@ -61,15 +61,18 @@ function Portfolio() {
                </div>
            :
            <div>
-               <ArtifactCard
-               title="The importance of being earnest in software development"
-               date="12JAN2021"
-               content="Lorem ipsum dolor sit amet, ne eos error definitiones. Eu cum nisl legendos. Vix id congue nominati platonem, an pericula consequuntur vim. Brute nemore mediocritatem eum no, mel labitur principes id. Eos tollit ceteros vulputate an.
-
-               His probo primis semper id. Quem ponderum pro no, ei eleifend facilisis delicatissimi ius. Te libris aliquid sea, pro eu audiam copiosae sapientem, in est modus mollis. Facilis menandri volutpat sed ne, sed alia causae ei. No nec verterem salutatus tincidunt.
+               {
+                 artifacts.map((artifact) => {
+                   return (
+                      <ArtifactCard
+                      title={artifact.title}
+                      date={artifact.createdAt}
+                      content={artifact.content}
+                      />
+                   )
+                 })
+               }
                
-               Duo ei porro assueverit signiferumque, in mazim ridens urbanitas quo, elit luptatum neglegentur nec ad. An iriure offendit deterruisset est, quo id aeterno delicatissimi. Et omnis senserit qualisque vix, in esse prima elaboraret sed, vix ne tritani scribentur. Vel no altera veritus, cu laoreet fuisset alienum duo."
-               />
            </div>
 }   
         </div>
