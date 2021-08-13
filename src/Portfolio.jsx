@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CloseIcon from '@material-ui/icons/Close';
 import Draft from './Draft';
+import ArtifactCard from './ArtifactCard';
 
 function Portfolio() { 
     const useStyles = makeStyles((theme) => ({
@@ -60,7 +61,15 @@ function Portfolio() {
                </div>
            :
            <div>
-               Placeholder for portfolio pieces
+               <ArtifactCard
+               title="The importance of being earnest in software development"
+               date="12JAN2021"
+               content="Lorem ipsum dolor sit amet, ne eos error definitiones. Eu cum nisl legendos. Vix id congue nominati platonem, an pericula consequuntur vim. Brute nemore mediocritatem eum no, mel labitur principes id. Eos tollit ceteros vulputate an.
+
+               His probo primis semper id. Quem ponderum pro no, ei eleifend facilisis delicatissimi ius. Te libris aliquid sea, pro eu audiam copiosae sapientem, in est modus mollis. Facilis menandri volutpat sed ne, sed alia causae ei. No nec verterem salutatus tincidunt.
+               
+               Duo ei porro assueverit signiferumque, in mazim ridens urbanitas quo, elit luptatum neglegentur nec ad. An iriure offendit deterruisset est, quo id aeterno delicatissimi. Et omnis senserit qualisque vix, in esse prima elaboraret sed, vix ne tritani scribentur. Vel no altera veritus, cu laoreet fuisset alienum duo."
+               />
            </div>
 }   
         </div>
